@@ -2,6 +2,13 @@
 Bot application — assembles routers, sets up middleware, starts polling.
 """
 
+import os
+import sys
+
+# Ensure parent directory is on sys.path so `bot` package is importable
+# even when this file is executed directly (python bot/main.py)
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import asyncio
 import logging
 
