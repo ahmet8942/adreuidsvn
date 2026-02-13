@@ -13,4 +13,4 @@ COPY main.py .
 # Copy .env if exists (can also mount at runtime)
 COPY .env* ./
 
-CMD ["python", "main.py"]
+CMD pip install --no-cache-dir -r requirements.txt && python main.py
